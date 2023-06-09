@@ -1,0 +1,481 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    padding: 0;
+    margin: 0;
+    background: #1D2127;
+    color: #c4c4c4;
+    line-height: 1.6;
+}
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.process-section {
+    width: 100%;
+    margin: auto;
+    color: #444;
+  
+}
+
+.process-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+    flex: 1 1 auto;
+    min-width: 300px; /* Adjust this value as needed */
+
+
+}
+
+
+
+.process-circle {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 2px solid #4caf50;
+}
+
+.process-circle img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.step-content {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; /* Use 100% width to fill the available space */
+
+    margin: auto;
+}
+
+.process-step h3 {
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+
+.process-step .progress-bar {
+    background: #e6e6e6;
+    height: 10px;
+    width: 80%;
+    margin: 16px auto;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.process-step .progress {
+    height: 100%;
+    background: #4caf50;
+}
+
+.process-step p {
+    color: #777;
+    margin: 5px 0;
+}
+
+.process-arrow {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    margin-left: -10px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 15px 10px 0 10px;
+    border-color: #4caf50 transparent transparent transparent;
+}
+
+.items-to-complete {
+    text-align: left;
+    margin-top: 16px;
+}
+
+.items-list {
+    padding-left: 20px;
+}
+
+.items-list li {
+    position: relative;
+    margin-bottom: 10px;
+    list-style-type: none; /* Remove default bullet */
+    padding-left: 25px; /* Add some padding to make space for the custom bullet */
+}
+
+.items-list li:before {
+    content: "";
+    position: absolute;
+    left: 4px; /* Adjust this value to position the line through the middle of the bullet */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #c4c4c4; /* Color of the line */
+}
+
+
+.items-list li:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 10px;
+    background: #c4c4c4; /* Color of the bullet */
+    border-radius: 50%;
+}
+
+
+.hidden-item {
+    display: none;
+}
+
+.hidden-item:before,
+.hidden-item:after {
+    display: none;
+}
+
+
+.expand-button {
+    background-color: transparent;
+    color: #4caf50;
+    border: 2px solid #4caf50;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    width: 100px;  /* Adjust as needed */
+    text-align: center; /* Center the button text */
+}
+
+
+.expand-button:hover {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+
+
+
+nav {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 5%; /* reduce the left and right padding */
+    position: sticky;
+    top: 0;
+    background-color: #1D2127;
+    z-index: 9999; /* Ensure the navigation appears above other elements */
+    transition: opacity 0.3s; /* Add a transition effect for the fade */
+
+
+}
+
+nav.fade {
+  opacity: 0; /* Hide the navigation when faded */
+}
+
+nav .nav-links {
+    list-style: none;
+    display: flex;
+    flex-grow: 1; /* Added */
+    justify-content: flex-start; /* Align items to the left */
+}
+
+nav .nav-links li {
+    margin-left: 30px;
+}
+
+nav .nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    padding-bottom: 2px;
+    transition: border-bottom 0.3s;
+}
+
+nav .nav-links li a:hover {
+    border-bottom: 2px solid #fff;
+}
+
+#dashboard-panel {
+    background-color: #1D2127; /* Keeping this the same as the body background for a sleek look */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+#dashboard-panel:hover {
+    background-color: #15191C; /* Darker color on hover */
+}
+
+#dashboard-panel h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #FFFFFF; /* Using a soft blue-grey color */
+}
+
+#dashboard-panel p {
+    font-size: 1.2em;
+    color: #c4c4c4;
+}
+
+#user-name, #app-status {
+    color: #00A2CB;
+}
+#outside-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+
+#user-name, #app-status {
+    color: #00A2CB;
+}
+  #outside-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100px;
+    }
+
+#meeting-button {
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+  border: none;
+  background-color: #00A2CB;
+  color: #FFFFFF;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+
+  /* Make the button cover the entire clickable area */
+  width: auto;
+  display: inline-block;
+  line-height: 1;
+}
+
+#meeting-button:hover {
+  background-color: #B388EB;
+}
+
+.button-subtext {
+  display: block;
+  font-size: 0.8em;
+  margin-top: 5px;
+  color: #FFFFFF;
+}
+
+.bullet-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: #15191C;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    border-radius: 10px;
+    text-align: center;
+}
+
+#logo {
+    max-width: 150px;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 25px;
+}
+
+#chat {
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: 300px;
+    text-align: left;
+    overflow-y: auto;
+}
+
+#chat::-webkit-scrollbar {
+    width: 2px;
+}
+
+#chat::-webkit-scrollbar-track {
+    background: #15191C;
+}
+
+#chat::-webkit-scrollbar-thumb {
+    background: #B388EB;
+    border-radius: 10px;
+}
+
+#chat::-webkit-scrollbar-thumb:hover {
+    background: #00A2CB;
+}
+
+#input-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+#input {
+    flex-grow: 1;
+    border-radius: 20px;
+    padding: 12px 20px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #FFFFFF;
+    border: none;
+    background-color: #1D2127;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00A2CB;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    transform: scale(1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #B388EB;
+    transform: scale(0.98);
+
+}
+button:active {
+    transform: scale(0.95);
+}
+
+li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.gpt-question {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.user-question {
+    color: #FFFFFF;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.user-name {
+    color: #B388EB;
+    margin-bottom: 5px;
+    margin-left: 1px;
+    font-weight: 200;
+
+}
+
+.message {
+    display: flex;
+    align-items: flex-start;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    color: #FFFFFF;
+    width: fit-content;
+    max-width: calc(100% - 20px);
+}
+
+.message-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.message-inner {
+    background-color: #1D2127;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.message-inner-user {
+    background-color: #00A2CB;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+.profile-picture-app {
+    width: 45px;
+    height: 77px;
+    margin-right: 10px;
+}
+
+.message-content {
+    flex: 1;
+}
+
+.message-content p {
+    margin: 0;
+}
+
+footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+.heart {
+  color: red; 
+}
+
+  .meetings-iframe-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #1D2127;
+        pointer-events: none;
+    }
+
+    .meetings-iframe-container {
+        position: relative;
+    }
