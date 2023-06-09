@@ -26,6 +26,13 @@ client does not specify the exact number line they are responding to and you are
  4) Do not ask the client what screens they want in the app. Rather, identify what features and functionality they want in the app so that you can provide the screens that will be needed.'
 }];
 
+//function to handle the enter key
+function handleEnterKey(event) { 
+    if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("send-button").click();
+    }
+}
 
 
 // Function to handle scroll events
@@ -143,7 +150,8 @@ window.onload = async function() {
 
   // Fetch userName using the id
   const response = await axios.get(`https://maize-puddle-turkey.glitch.me/api/username/${id}`);
-  
+  //add event listener for enter key
+document.getElementById("input").addEventListener("keyup", handleEnterKey);
     
   const usernameParts = response.data.userName.split(' - ');
   userName = usernameParts[0];  document.getElementById('user-name').textContent = userName;
@@ -175,29 +183,6 @@ document.getElementById('meeting-button').addEventListener('click', function() {
         meetingsContainer.style.display = 'none';
     }
 });
-
-/*document.querySelectorAll(".expand-button").forEach(function(button) {
-    button.addEventListener("click", function() {
-        const stepId = this.getAttribute("data-step");
-        const hiddenItems = document.querySelectorAll(stepId + " .hidden-item");
-        const visibleItems = document.querySelectorAll(stepId + " .visible-item");
-        
-        if (this.textContent === "Show more") {
-            hiddenItems.forEach(function(item) {
-                item.classList.remove("hidden-item");
-                item.classList.add("visible-item");
-            });
-            this.textContent = "Hide";
-        } else {
-            visibleItems.forEach(function(item) {
-                item.classList.remove("visible-item");
-                item.classList.add("hidden-item");
-            });
-            this.textContent = "Show more";
-        }
-    });
-}); */
-
 
 
 
