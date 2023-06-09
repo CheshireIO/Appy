@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Appy</title>
+    <link rel="icon" type="image/x-icon" href="https://cdn.glitch.global/91ffa88b-6ec0-4f87-b444-e9ce77f764ab/app.png?v=1685655563273">
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+ <nav>
+        <div class="nav-container">
+            <ul class="nav-links">
+                <li><a href="#home">Idea Ai</a></li>
+                <li><a href="#about">Solutions Ai</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+   <div id="dashboard-panel">
+   <h1>Welcome, <span id="user-name"></span></h1>
+    <p>Current Phase: <span id="app-status">Mapping(UI/UX)</span></p>
+  <div class="dashboard-buttons">
+  </div>
+</div>
+
+
+
+
+    <div class="container">
+      
+    <h1>
+        <img id="logo" src="https://cdn.glitch.global/91ffa88b-6ec0-4f87-b444-e9ce77f764ab/head3.png?v=1685655568291" alt="Your Company Logo">
+    </h1>
+    <div id="chat">
+        <!-- Chat messages will be appended here -->
+
+    </div>
+    <div id="input-container">
+        <input type="text" id="input" placeholder="Type your message..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+</div>
+  
+
+  
+ <!--<div class="process-section">
+    <h2>Project Status</h2>
+    <div class="process-grid">
+        <div class="process-step" id="step1">
+            <div class="process-circle">
+                <img src="https://cdn.glitch.global/7f188fea-48c1-49ca-b761-0f1a53888883/balazs-ketyi-6yMb5V8L34o-unsplash.jpg?v=1686181323291" alt="Step 1">
+            </div>
+            <div class="step-content">
+                <h3>UI/UX</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 50%;"></div>
+                </div>
+                <div class="items-to-complete">
+                    <h4>Tasks:</h4>
+                    <ul class="items-list">
+                        <li>Design Feedback</li>
+                        <li>UX Testing</li>
+                         <li class="hidden-item">Create PRD</li>
+                        <li class="hidden-item">Finalize Design</li>
+                        <li class="hidden-item">Approval Meeting</li>
+                    </ul>
+                  <button class="expand-button" data-step="#step1">Show more</button>
+                </div>
+                <p>Next: Marketing</p>
+                <div class="process-arrow"></div>
+
+            </div>
+        </div>
+        
+              <div class="process-step" id="step2">
+            <div class="process-circle">
+                <img src="https://cdn.glitch.global/7f188fea-48c1-49ca-b761-0f1a53888883/balazs-ketyi-6yMb5V8L34o-unsplash.jpg?v=1686181323291" alt="Step 1">
+            </div>
+      <div class="step-content">
+                <h3>Marketing</h3>
+                <div class="progress-bar">
+                    <div class="progress" style="width: 0%;"></div>
+                </div>
+                <div class="items-to-complete">
+                    <h4>Tasks:</h4>
+                    <ul class="items-list">
+                        <li>Write script</li>
+                        <li class="hidden-item">Finalize Animation</li>
+                        <li class="hidden-item">Approval Meeting</li>
+                    </ul>
+                    <button class="expand-button" data-step="#step2">Show more</button>
+                </div>
+                <p>Next: Coding</p>
+                <div class="process-arrow"></div>
+
+            </div>
+
+    </div>
+</div>
+<!-- More process steps -->
+
+
+
+
+
+  <div id="outside-container">
+  <button id="meeting-button">
+  Prefer talking to humans?
+  <span class="button-subtext">Click here to schedule</span>
+  </button>
+  </div>
+
+ <!-- <div class="meetings-iframe-overlay"></div> -->
+<!-- Start of Meetings Embed Script -->
+<div class="meetings-iframe-container" data-src="https://meetings.hubspot.com/zac40?embed=true" style="display: none;"></div>
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<!-- End of Meetings Embed Script -->
+
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="/index.js"></script>
+ 
+
+
+<!-- Meetings Embed Script -->
+<script type="text/javascript" src="https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js"></script>
+<!-- End of Meetings Embed Script -->
+
+</body>
+<footer>
+  <p>Made with <span class="heart">❤️</span> in Atl</p>
+</footer>
+</html>
