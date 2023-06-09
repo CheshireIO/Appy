@@ -19,6 +19,7 @@ const openai = new OpenAIApi(configuration);
 
 
 
+
 app.post('/api/chat', async (req, res) => {
   const message = req.body.prompt;
   const conversationHistory = req.body.history;
@@ -48,7 +49,7 @@ app.post('/api/chat', async (req, res) => {
 
 app.get('/:id', async (req, res) => {
   console.log("in id route")
-  res.sendFile(__dirname + '/public/test.html');
+  res.sendFile(__dirname + '/public/index.html');
 });
 
 

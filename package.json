@@ -1,0 +1,34 @@
+{
+    "name": "github-codespaces-node",
+    "version": "0.1.0",
+    "description": "A simple Node app built on fastify, now running on GitHub Codespaces.",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "@fastify/formbody": "^7.4.0",
+      "@fastify/static": "^6.10.1",
+      "@fastify/view": "^7.4.1",
+      "axios": "^1.4.0",
+      "body-parser": "^1.20.2",
+      "cors": "^2.8.5",
+      "express": "^4.18.2",
+      "fastify": "^4.17.0",
+      "handlebars": "^4.7.7",
+      "openai": "^3.2.1"
+    },
+    "engines": {
+      "node": "14.x"
+    },
+    "repository": {
+      "url": "https://github.com/Cheshireio/Appy"
+    },
+    "license": "MIT",
+    "keywords": [
+      "node",
+      "github",
+      "codespaces"
+    ]
+  }
+  
